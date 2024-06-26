@@ -5,13 +5,21 @@
     <title>bai 4</title>
 </head>
 <body>
+<pre id = 'hinhchunhat'></pre>
 <script>
-    for (let i = 1; i <=7 ; i++) {
-        for (let j = 1; j <= 21; j++) {
-            document.write("*");
+    let hinh = '';
+    for (let i = 0; i <6; i++) {
+        for (let j = 0; j <21; j++) {
+            if (i === 0 || i ===5 || j ===0 || j === 20) {
+                hinh += '*';
+            } else {
+                hinh +=' ';
+            }
         }
-        document.write("<br>");
+        hinh +='<br>';
+    //     "&nbsp&nbsp" : khoang cach trong JS
     }
+    document.getElementById('hinhchunhat').innerHTML= hinh;
 </script>
 </body>
 </html>
